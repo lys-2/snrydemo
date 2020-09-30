@@ -1,0 +1,13 @@
+v0.0.1 - initial
+
+basic network multiplayer
+3d world controls
+trace shooting
+snowmen character
+
+v0.0.2
+
+basic ui
+basic fx, sound
+basic character stat system
+base flying
