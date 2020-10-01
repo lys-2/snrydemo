@@ -8,6 +8,10 @@ snowmen character
 v0.0.2
 
 basic ui
-basic fx, sound
+basic vfx, sound
 basic character stat system
 base flying
+
+v0.0.3
+
+...
