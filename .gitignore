@@ -76,3 +76,7 @@ DerivedDataCache/*
 
 WindowsNoEditor/*
 Megascans/*
+**/Megascans
+**/MSPresets
+Content/Megascans/
+Content/MSPresets/
