@@ -1,0 +1,18 @@
+chat log
+
+game saving
+
+quests
+
+
+
+battle system
+
+character + weapon
+
+trace
+ask range -> direction 
+
+on attack -> ask serv -> trace -> do on hit
+
+on hit -> do damage
