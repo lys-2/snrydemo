@@ -150,10 +150,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "CustomMeshComponent",
-			"Enabled": false
-		},
-		{
 			"Name": "DataValidation",
 			"Enabled": false
 		},
@@ -364,6 +360,10 @@
 		{
 			"Name": "MacGraphicsSwitching",
 			"Enabled": false
+		},
+		{
+			"Name": "StaticMeshEditorExtension",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
