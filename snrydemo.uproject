@@ -389,10 +389,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "OnlineSubsystemUtils",
-			"Enabled": false
-		},
-		{
 			"Name": "Paper2D",
 			"Enabled": false
 		},
@@ -401,12 +397,12 @@
 			"Enabled": false
 		},
 		{
-			"Name": "OnlineSubsystem",
+			"Name": "VisualStudioCodeSourceCodeAccess",
 			"Enabled": false
 		},
 		{
-			"Name": "OnlineFramework",
-			"Enabled": true
+			"Name": "OnlineSubsystem",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
