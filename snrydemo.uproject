@@ -284,10 +284,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "RuntimePhysXCooking",
-			"Enabled": false
-		},
-		{
 			"Name": "ProxyLODPlugin",
 			"Enabled": false
 		},
@@ -362,7 +358,54 @@
 			"Enabled": false
 		},
 		{
-			"Name": "StaticMeshEditorExtension",
+			"Name": "PhysXVehicles",
+			"Enabled": false
+		},
+		{
+			"Name": "PostSplashScreen",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"XboxOne"
+			]
+		},
+		{
+			"Name": "EditableMesh",
+			"Enabled": false
+		},
+		{
+			"Name": "GeometryCache",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemIOS",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"IOS",
+				"TVOS"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemNull",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemUtils",
+			"Enabled": false
+		},
+		{
+			"Name": "Paper2D",
+			"Enabled": false
+		},
+		{
+			"Name": "PlatformCrypto",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineFramework",
 			"Enabled": true
 		}
 	],
