@@ -17,3 +17,9 @@ v0.0.3
 quests
 chat log
 game saving feature
+
+v0.0.4
+
+world features
+inventory
+user settings

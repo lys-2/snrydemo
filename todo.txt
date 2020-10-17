@@ -1,11 +1,3 @@
-chat log
-
-game saving
-
-quests
-
-
-
 battle system
 
 character + weapon
@@ -16,3 +8,21 @@ ask range -> direction
 on attack -> ask serv -> trace -> do on hit
 
 on hit -> do damage
+
+
+quest list
+
+quests listed on server
+player has taken quests, completed
+
+logging
+
+on some event 
+	if server - multicast to all
+	if event from server - log locally
+	 
+
+game save
+
+keep character, location, quest
+all actors state
