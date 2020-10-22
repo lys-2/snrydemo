@@ -14,6 +14,7 @@ quest list
 
 quests listed on server
 player has taken quests, completed
+quest has 
 
 logging
 
