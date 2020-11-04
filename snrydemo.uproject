@@ -397,10 +397,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "VisualStudioCodeSourceCodeAccess",
-			"Enabled": false
-		},
-		{
 			"Name": "OnlineSubsystem",
 			"Enabled": false
 		}
