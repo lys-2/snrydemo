@@ -80,3 +80,7 @@ Megascans/*
 **/MSPresets
 Content/Megascans/
 Content/MSPresets/
+
+Wav/* 
+**/Wav 
+Content/Wav/ 
