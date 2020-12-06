@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "{B96B42C9-4CB4-F6B4-E0C1-0FBEECBB71E7}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -107,26 +107,6 @@
 		},
 		{
 			"Name": "CameraShakePreviewer",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosClothEditor",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosCloth",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosNiagara",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosEditor",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosSolverPlugin",
 			"Enabled": false
 		},
 		{
@@ -369,14 +349,6 @@
 			]
 		},
 		{
-			"Name": "EditableMesh",
-			"Enabled": false
-		},
-		{
-			"Name": "GeometryCache",
-			"Enabled": false
-		},
-		{
 			"Name": "OnlineSubsystemIOS",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
@@ -399,6 +371,22 @@
 		{
 			"Name": "OnlineSubsystem",
 			"Enabled": false
+		},
+		{
+			"Name": "PlanarCut",
+			"Enabled": true
+		},
+		{
+			"Name": "GeometryCollectionPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "FieldSystemPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "Water",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
