@@ -75,6 +75,9 @@ DerivedDataCache/*
 
 
 WindowsNoEditor/*
+LinuxServer/*
+WindowsServer/*
+
 Megascans/*
 **/Megascans
 **/MSPresets
