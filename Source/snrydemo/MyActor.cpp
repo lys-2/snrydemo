@@ -11,7 +11,7 @@ AMyActor::AMyActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 
 	PrimaryActorTick.bCanEverTick = false;
-	SomeText = "$)_#($_)@#$";
+	SomeText = "!!!!12313123";
 
 	VisualMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	VisualMesh->SetupAttachment(RootComponent);
@@ -62,6 +62,7 @@ void AMyActor::BeginPlay()
 		if (GEngine)
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, Message);
 		});
+		
 
 	[]() {if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, "dd"); };
 
@@ -106,7 +107,7 @@ void AMyActor::Tick(float DeltaTime)
 	float DeltaRotation = DeltaTime * RotationSpeed;    //Rotate by 20 degrees per second
 	NewRotation.Yaw += DeltaRotation;
 	SetActorLocationAndRotation(NewLocation, NewRotation);
-
-
+	if (GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, SomeText);
 }
 
