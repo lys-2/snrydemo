@@ -6,23 +6,30 @@
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
 
+
 UCLASS()
 class SNRYDEMO_API AMyActor : public AActor
 {
-	GENERATED_BODY()
 
+	GENERATED_BODY()
 	UFUNCTION(BlueprintCallable, Category = "123123")
 	static void MyFunction1(FString SomeString);
 
 public:	
 	// Sets default values for this actor's properties
 	AMyActor();
-	UPROPERTY(EditAnywhere, Category = "Damage")
-	int32 TotalDamage;
 
-	int32 TotalDamage2;
-	int threedim[111][111][111];
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* VisualMesh;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SomeCategory")
+	FString SomeText;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloatingActor")
+		float FloatSpeed = 20.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloatingActor")
+		float RotationSpeed = 20.0f;
 
 
 protected:
