@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
+#include "Components/TextRenderComponent.h"
+
+
 #include "MyActor.generated.h"
 
 
@@ -21,6 +25,11 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* VisualMesh;
+
+	UPROPERTY(EditAnywhere)
+	UTextRenderComponent* TextMesh;
+
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SomeCategory")
 	FString SomeText;

@@ -11,24 +11,30 @@ AMyActor::AMyActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 
 	PrimaryActorTick.bCanEverTick = false;
-	SomeText = "!!!!12313123";
+	TextMesh = CreateDefaultSubobject<UTextRenderComponent>(TEXT("TextMesh1"));
+	TextMesh->SetupAttachment(RootComponent);
 
-	VisualMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	VisualMesh->SetupAttachment(RootComponent);
+	TextMesh->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+	TextMesh->SetWorldScale3D(FVector(4.0f, 4.0f, 4.0f));
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeVisualAsset(TEXT("/Game/Mesh/tree.tree"));
+	//VisualMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 
-	if (CubeVisualAsset.Succeeded())
-	{
-		VisualMesh->SetStaticMesh(CubeVisualAsset.Object);
-		VisualMesh->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
-	}
+	//static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeVisualAsset(TEXT("/Game/Mesh/tree.tree"));
+
+	//if (CubeVisualAsset.Succeeded())
+////	{
+		//VisualMesh->SetStaticMesh(CubeVisualAsset.Object);
+
+//	}
 
 }
 
 void AMyActor::MyFunction1(FString SomeString)
 {
-	//UE_LOG(LogTemp, Log, TEXT("123123 %s"), *SomeString);
+	AMyActor* P = nullptr;
+
+	UE_LOG(LogTemp, Log, TEXT("123123 %s"), *SomeString);
+
 
 }
 
@@ -36,6 +42,8 @@ void AMyActor::MyFunction1(FString SomeString)
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//TextMesh->SetText(TEXT("1111"));
 
 	const FString ServerURL = TEXT("wss://noeight.net/ws/chat/lobby/"); // Your server URL. You can use ws, wss or wss+insecure.
 	const FString ServerProtocol = TEXT("wss");              // The WebServer protocol you want to use.
@@ -58,7 +66,7 @@ void AMyActor::BeginPlay()
 
 	Socket->OnMessage().AddLambda([](const FString& Message) -> void {
 		// This code will run when we receive a string message from the server.
-
+		MyFunction1(Message);
 		if (GEngine)
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, Message);
 		});
@@ -109,5 +117,6 @@ void AMyActor::Tick(float DeltaTime)
 	SetActorLocationAndRotation(NewLocation, NewRotation);
 	if (GEngine)
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, SomeText);
+
 }
 
