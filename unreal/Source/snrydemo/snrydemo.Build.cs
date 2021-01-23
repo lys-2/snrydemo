@@ -8,7 +8,7 @@ public class snrydemo : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "WebSockets", "Text3D" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "WebSockets", "Text3D", "JsonUtilities", "Json" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

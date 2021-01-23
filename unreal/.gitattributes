@@ -1,0 +1,4 @@
+Wav/** filter=lfs diff=lfs merge=lfs -text
+Wav/* filter=lfs diff=lfs merge=lfs -text
+**/Wav filter=lfs diff=lfs merge=lfs -text
+Content/Wav/ filter=lfs diff=lfs merge=lfs -text

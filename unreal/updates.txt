@@ -23,3 +23,9 @@ v0.0.4
 world features
 inventory
 user settings
+
+
+v0.0.5
+
+auth
+android remote

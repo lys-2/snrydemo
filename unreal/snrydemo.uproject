@@ -54,10 +54,6 @@
 			]
 		},
 		{
-			"Name": "AndroidPermission",
-			"Enabled": false
-		},
-		{
 			"Name": "AnimationSharing",
 			"Enabled": false
 		},
@@ -407,6 +403,7 @@
 	],
 	"TargetPlatforms": [
 		"WindowsNoEditor",
-		"LinuxNoEditor"
+		"LinuxNoEditor",
+		"Android"
 	]
 }

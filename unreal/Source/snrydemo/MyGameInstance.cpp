@@ -10,5 +10,6 @@ void UMyGameInstance::Init()
 
     // Load the WebSockets module. An assertion will fail if it isn't found.
     FWebSocketsModule& Module = FModuleManager::LoadModuleChecked<FWebSocketsModule>(TEXT("WebSockets"));
+
 	
 }
