@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+<title>top site</title>
+
+</head>
+<body style="background-color:HoneyDew;">
+<p>
+<h4 style="background-color:Coral;">🔍🔍🔍🧶🔍🔍🧶🧶🧶</h4>
+<h5 style="background-color:Aquamarine;">🏮🧶🏮🏮🫑🫑🏩🏩</h5>
+<h3>🏮🏮🫑🏩</h3>
+<h1><%= String.capitalize @name %>!</h1>
+<p>4343434</p>
+
+<div id="messages" role="log" aria-live="polite"></div>
+<input id="chat-input" type="text"></input>
+
+</body>
+</html>
