@@ -50,5 +50,17 @@ defmodule HwWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+
+  plug :introspect
   plug HwWeb.Router
+
+  def introspect(conn, _opts) do
+    IO.puts """
+    remote_ip: #{inspect(conn.remote_ip)}
+    Host: #{inspect(conn.host)}
+    Headers: #{inspect(conn.req_headers)}
+    """
+    conn
+  end
+
 end

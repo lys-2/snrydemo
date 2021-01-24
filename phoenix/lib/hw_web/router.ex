@@ -7,6 +7,8 @@ defmodule HwWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug HelloWeb.Plugs.Locale, "en"
+    
   end
 
   pipeline :api do
@@ -17,6 +19,7 @@ defmodule HwWeb.Router do
     pipe_through :browser
 
     get "/hello/:name", HelloController, :world
+
     get "/", PageController, :index
   end
 

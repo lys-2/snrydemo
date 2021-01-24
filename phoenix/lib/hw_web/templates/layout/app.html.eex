@@ -7,5 +7,7 @@
   </head>
   <body>
       <%= @inner_content %>
+      <main role="main" class="container">
+       <p>Locale: <%= @locale %></p>
   </body>
 </html>
