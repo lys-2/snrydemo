@@ -88,7 +88,8 @@ void AMyActor::BeginPlay()
 	TSharedRef<IWebSocket> Socket = FWebSocketsModule::Get().CreateWebSocket(ServerURL, ServerProtocol);
 
 	// We bind all available events
-	Socket->OnConnected().AddLambda([]() -> void {
+	Socket->OnConnected().AddLambda([Socket]() -> void {
+		Socket->Send(TEXT("[\"3\",\"3\",\"room:lobby\",\"phx_join\",{}]"));
 		// This code will run once connected.
 		});
 
@@ -116,26 +117,31 @@ void AMyActor::BeginPlay()
 			/*CountdownText->SetText(JsonObject->GetStringField(TEXT("Message")));*/
 		}
 
+		if (!(this->IsValidLowLevel())) {
+			Socket->Close();
+			return;
+		}
+
 		if (GEngine)
 			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, JsonObject->GetStringField(TEXT("Message")));
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, Message);
+		CountdownText->SetText(Message);
+
 		});
 
 	// And we finally connect to the server. 
 
 	Socket->Connect();
 
-		if (!Socket->IsConnected())
-		{
-			// Don't send if we're not connected.
-			return;
-		}
+	if (!Socket->IsConnected())
+	{
+		// Don't send if we're not connected.
+		return;
+	}
 
-		const FString StringMessage = TEXT("[\"room:lobby\",\"phx_join\",{}]");
-		// const TArray BinaryMessage = { 'H', 'e', 'l', 'l', 'o', ' ', 't', 'h', 'e', 'r', 'e', ' ', '!' };
+	// const TArray BinaryMessage = { 'H', 'e', 'l', 'l', 'o', ' ', 't', 'h', 'e', 'r', 'e', ' ', '!' };
 
-		Socket->Send(StringMessage);
-		// Socket->Send(BinaryMessage.GetData(), sizeof(uint8) * BinaryMessage.Num());
+	// Socket->Send(BinaryMessage.GetData(), sizeof(uint8) * BinaryMessage.Num());
 
 	Socket->OnRawMessage().AddLambda([](const void* Data, SIZE_T Size, SIZE_T BytesRemaining) -> void {
 		// This code will run when we receive a raw (binary) message from the server.
