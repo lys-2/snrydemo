@@ -170,10 +170,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "LauncherChunkInstaller",
-			"Enabled": false
-		},
-		{
 			"Name": "MatineeToLevelSequence",
 			"Enabled": false
 		},
@@ -406,6 +402,19 @@
 		},
 		{
 			"Name": "HDRIBackdrop",
+			"Enabled": true
+		},
+		{
+			"Name": "ObjectDeliverer",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/c2612cff517c48bca7dd080299d97ca8"
+		},
+		{
+			"Name": "HTTPChunkInstaller",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayAbilities",
 			"Enabled": true
 		}
 	],
