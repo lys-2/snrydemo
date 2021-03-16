@@ -21,22 +21,27 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("TAG", "message")
 
-        val m = "hello from ANDROID123!"
+
         val s = DatagramSocket()
-        val p = DatagramPacket(m.toByteArray(), m.length,
-                InetAddress.getByName("192.168.1.103"), 8900);
-
-        val t = Thread(Runnable {
-            s.send(p)
-        })
-
 
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+
+
+
+            val m = "33468!"
+            val p = DatagramPacket(m.toByteArray(), m.length,
+                    InetAddress.getByName("192.168.1.103"), 8900)
+
+            val t = Thread(Runnable {
+                s.send(p)
+            })
             t.start()
+
         }
+
 
     }
 
