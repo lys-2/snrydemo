@@ -22,6 +22,15 @@ class SNRYDEMO_API AMyActor : public AActor
 
 public:	
 	// Sets default values for this actor's properties
+
+	/** Show the native loading screen, such as on a map transfer. If bPlayUntilStopped is false, it will be displayed for PlayTime and automatically stop */
+	UFUNCTION(BlueprintCallable, Category = Loading)
+		static void PlayLoadingScreen(bool bPlayUntilStopped, float PlayTime);
+
+	/** Turns off the native loading screen if it is visible. This must be called if bPlayUntilStopped was true */
+	UFUNCTION(BlueprintCallable, Category = Loading)
+		static void StopLoadingScreen();
+
 	AMyActor();
 
 

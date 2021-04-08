@@ -13,7 +13,11 @@ public class snrydemo : ModuleRules
 		 "Sockets", "Networking", "ObjectDeliverer", "GameplayAbilities",
 		 "GameplayTags", "GameplayTasks" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] {
+		PrivateDependencyModuleNames.AddRange(new string[] {"ActionRPGLoadingScreen",
+				"Slate",
+				"SlateCore",
+				"InputCore",
+				"MoviePlayer",
 			"HttpChunkInstaller", "LauncherChunkInstaller", "ChunkDownloader"
 		});
 

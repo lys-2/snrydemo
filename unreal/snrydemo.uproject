@@ -7,10 +7,13 @@
 		{
 			"Name": "snrydemo",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
+
+		},
+		{
+			"name": "actionrpgloadingscreen",
+			"type": "clientonly",
+			"loadingphase": "preloadingscreen"
 		}
 	],
 	"Plugins": [
@@ -420,6 +423,6 @@
 	],
 	"TargetPlatforms": [
 		"WindowsNoEditor",
-		"LinuxNoEditor"
+		"LinuxAArch64NoEditor"
 	]
 }

@@ -3,6 +3,22 @@
 #include "MyActor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Dom/JsonObject.h"
+#include "ActionRPGLoadingScreen.h"
+
+
+
+
+void AMyActor::PlayLoadingScreen(bool bPlayUntilStopped, float PlayTime)
+{
+	IActionRPGLoadingScreenModule& LoadingScreenModule = IActionRPGLoadingScreenModule::Get();
+	LoadingScreenModule.StartInGameLoadingScreen(bPlayUntilStopped, PlayTime);
+}
+
+void AMyActor::StopLoadingScreen()
+{
+	IActionRPGLoadingScreenModule& LoadingScreenModule = IActionRPGLoadingScreenModule::Get();
+	LoadingScreenModule.StopInGameLoadingScreen();
+}
 
 // Sets default values
 AMyActor::AMyActor()

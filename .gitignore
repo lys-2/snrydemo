@@ -1,6 +1,8 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+*.blend1
+
 # Compiled Object files
 *.slo
 *.lo
