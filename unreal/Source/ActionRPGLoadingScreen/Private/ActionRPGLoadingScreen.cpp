@@ -35,7 +35,7 @@ public:
 		// Load version of the logo with text baked in, path is hardcoded because this loads very early in startup
 		static const FName LoadingScreenName(TEXT("/Game/T_ActionRPG_TransparentLogo.T_ActionRPG_TransparentLogo"));
 
-		LoadingScreenBrush = MakeShareable(new FRPGLoadingScreenBrush(LoadingScreenName, FVector2D(1024, 256)));
+		LoadingScreenBrush = MakeShareable(new FRPGLoadingScreenBrush(LoadingScreenName, FVector2D(1024, 1024)));
 		
 		FSlateBrush *BGBrush = new FSlateBrush();
 		BGBrush->TintColor = FLinearColor(0.011f, 0.011f, 0.017f, 1.0f);
@@ -125,7 +125,7 @@ public:
 	{
 		FLoadingScreenAttributes LoadingScreen;
 		LoadingScreen.bAutoCompleteWhenLoadingCompletes = true;
-		LoadingScreen.MinimumLoadingScreenDisplayTime = 0.5f;
+		LoadingScreen.MinimumLoadingScreenDisplayTime = 0.2f;
 		LoadingScreen.WidgetLoadingScreen = SNew(SRPGLoadingScreen);
 		GetMoviePlayer()->SetupLoadingScreen(LoadingScreen);
 	}

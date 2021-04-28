@@ -8,12 +8,13 @@ public class snrydemo : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine",
-			"InputCore", "WebSockets", "Text3D", "JsonUtilities", "Json",
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", 
+			"InputCore", "WebSockets", "JsonUtilities", "Json",
 		 "Sockets", "Networking", "ObjectDeliverer", "GameplayAbilities",
 		 "GameplayTags", "GameplayTasks" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] {"ActionRPGLoadingScreen",
+		PrivateDependencyModuleNames.AddRange(new string[] {
+		"ActionRPGLoadingScreen",
 				"Slate",
 				"SlateCore",
 				"InputCore",

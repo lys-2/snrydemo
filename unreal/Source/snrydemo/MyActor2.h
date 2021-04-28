@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
 #include "MyActor2.generated.h"
+
 
 UCLASS()
 class SNRYDEMO_API AMyActor2 : public AActor

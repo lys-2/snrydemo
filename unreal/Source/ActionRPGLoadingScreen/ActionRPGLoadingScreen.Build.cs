@@ -25,6 +25,8 @@ public class ActionRPGLoadingScreen : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(
 			new string[] {
+				"http",
+				"WebSockets",
 				"MoviePlayer",
 				"Slate",
 				"SlateCore",

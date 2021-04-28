@@ -8,12 +8,11 @@
 			"Name": "snrydemo",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
-
 		},
 		{
-			"name": "actionrpgloadingscreen",
-			"type": "clientonly",
-			"loadingphase": "preloadingscreen"
+			"Name": "ActionRPGLoadingScreen",
+			"Type": "ClientOnly",
+			"LoadingPhase": "PreLoadingScreen"
 		}
 	],
 	"Plugins": [
@@ -372,18 +371,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "GeometryCollectionPlugin",
-			"Enabled": true
-		},
-		{
-			"Name": "FieldSystemPlugin",
-			"Enabled": true
-		},
-		{
-			"Name": "Water",
-			"Enabled": true
-		},
-		{
 			"Name": "PythonScriptPlugin",
 			"Enabled": true
 		},
@@ -393,10 +380,6 @@
 		},
 		{
 			"Name": "VirtualHeightfieldMesh",
-			"Enabled": true
-		},
-		{
-			"Name": "Text3D",
 			"Enabled": true
 		},
 		{
@@ -418,6 +401,38 @@
 		},
 		{
 			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "Water",
+			"Enabled": true
+		},
+		{
+			"Name": "ShallowWater",
+			"Enabled": true
+		},
+		{
+			"Name": "ChaosEditor",
+			"Enabled": false
+		},
+		{
+			"Name": "ChaosNiagara",
+			"Enabled": false
+		},
+		{
+			"Name": "ChaosSolverPlugin",
+			"Enabled": false
+		},
+		{
+			"Name": "ChaosClothEditor",
+			"Enabled": false
+		},
+		{
+			"Name": "ChaosCloth",
+			"Enabled": false
+		},
+		{
+			"Name": "ControlRig",
 			"Enabled": true
 		}
 	],
