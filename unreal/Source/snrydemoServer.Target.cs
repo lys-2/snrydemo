@@ -9,8 +9,8 @@ public class snrydemoServerTarget : TargetRules //Change this line according to 
     {
         Type = TargetType.Server;
         DefaultBuildSettings = BuildSettingsVersion.V2;
-        ExtraModuleNames.Add("snrydemo"); //Change this line according to the name of your project
-	//	bCompileChaos = true;
-	//	bUseChaos = true;
-	}
+        ExtraModuleNames.Add("snrydemo");
+        bUseLoggingInShipping = true;
+
+    }
 }

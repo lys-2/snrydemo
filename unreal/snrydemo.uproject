@@ -17,6 +17,44 @@
 	],
 	"Plugins": [
 		{
+			"Name": "VariantManager",
+			"Enabled": true
+		},
+		{
+			"Name": "MovieRenderPipeline",
+			"Enabled": true
+		},
+		{
+			"Name": "SunPosition",
+			"Enabled": true
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win32",
+				"Win64",
+				"Linux"
+			]
+		},
+		{
+			"Name": "ColorCorrectRegions",
+			"Enabled": true
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win32",
+				"Win64",
+				"Android"
+			]
+		},
+		{
+			"Name": "DatasmithImporter",
+			"Enabled": true
+		},
+		{
 			"Name": "HoudiniEngine",
 			"Enabled": false
 		},
@@ -379,10 +417,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "VirtualHeightfieldMesh",
-			"Enabled": true
-		},
-		{
 			"Name": "ModelingToolsEditorMode",
 			"Enabled": true
 		},
@@ -412,7 +446,11 @@
 			"Enabled": true
 		},
 		{
-			"Name": "ChaosEditor",
+			"Name": "ControlRig",
+			"Enabled": true
+		},
+		{
+			"Name": "ChaosClothEditor",
 			"Enabled": false
 		},
 		{
@@ -420,24 +458,20 @@
 			"Enabled": false
 		},
 		{
-			"Name": "ChaosSolverPlugin",
+			"Name": "ChaosEditor",
 			"Enabled": false
 		},
 		{
-			"Name": "ChaosClothEditor",
+			"Name": "ChaosSolverPlugin",
 			"Enabled": false
 		},
 		{
 			"Name": "ChaosCloth",
 			"Enabled": false
-		},
-		{
-			"Name": "ControlRig",
-			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
 		"WindowsNoEditor",
-		"LinuxAArch64NoEditor"
+		"LinuxNoEditor"
 	]
 }
