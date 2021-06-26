@@ -5,7 +5,7 @@
 #include "WebSocketsModule.h"
 
 const FString ServerURL = TEXT("ws://noeight.net:4000/socket/websocket?token=undefined&vsn=2.0.0"); // Your server URL. You can use ws, wss or wss+insecure.
-const FString ServerProtocol = TEXT("ws");              // The WebServer protocol you want to use.
+const FString ServerProtocol = TEXT("wss");              // The WebServer protocol you want to use.
 
 
 // And we finally connect to the server. 

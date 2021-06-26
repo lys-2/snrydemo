@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{B96B42C9-4CB4-F6B4-E0C1-0FBEECBB71E7}",
+	"EngineAssociation": "{D3DC0E9F-43B9-648C-96E9-03B80ECBA015}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -235,7 +235,7 @@
 		},
 		{
 			"Name": "NiagaraExtras",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "XCodeSourceCodeAccess",
@@ -426,7 +426,7 @@
 		},
 		{
 			"Name": "ObjectDeliverer",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/c2612cff517c48bca7dd080299d97ca8"
 		},
 		{
@@ -450,28 +450,18 @@
 			"Enabled": true
 		},
 		{
-			"Name": "ChaosClothEditor",
-			"Enabled": false
+			"Name": "ChaosCaching",
+			"Enabled": true
 		},
 		{
-			"Name": "ChaosNiagara",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosEditor",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosSolverPlugin",
-			"Enabled": false
-		},
-		{
-			"Name": "ChaosCloth",
-			"Enabled": false
+			"Name": "ChaosVehiclesPlugin",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
 		"WindowsNoEditor",
-		"LinuxNoEditor"
+		"LinuxNoEditor",
+		"Windows",
+		"Linux"
 	]
 }

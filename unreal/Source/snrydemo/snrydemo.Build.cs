@@ -10,7 +10,7 @@ public class snrydemo : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", 
 			"InputCore", "WebSockets", "JsonUtilities", "Json",
-		 "Sockets", "Networking", "ObjectDeliverer", "GameplayAbilities",
+		 "Sockets", "Networking", "GameplayAbilities",
 		 "GameplayTags", "GameplayTasks" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {
