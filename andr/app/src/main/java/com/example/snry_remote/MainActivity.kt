@@ -1,43 +1,25 @@
 package com.example.snry_remote
 
-import android.app.Activity
-import android.content.Intent
+import android.media.AudioFormat
+import android.media.AudioRecord
+import android.media.MediaRecorder
 import android.os.Bundle
 import android.os.SystemClock
-import android.provider.MediaStore
-import android.provider.Settings.ACTION_SETTINGS
 import android.util.Log
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
+import android.view.MotionEvent
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
-import android.view.MotionEvent;
-import android.view.KeyEvent
+
 
 
 class MainActivity : AppCompatActivity() {
-
-
-
-    val REQUEST_CODE = 200
-
-    fun capturePhoto() {
-
-        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(cameraIntent, REQUEST_CODE)
-    }
-
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE && data != null){
-
-        }
-    }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         Log.d("TAG", "12312313123")
@@ -52,19 +34,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+
 
         Log.d("TAG", "message")
-
 
 
         val rootView = window.decorView.rootView
 
         val s = DatagramSocket()
 
-        startActivity(Intent(ACTION_SETTINGS))
-
-        startActivity(Intent(ACTION_SETTINGS))
+//        startActivity(Intent(ACTION_SETTINGS))
 
         //Create amd send a tap event at the current target loctaion to the PhotoView
         //From testing (on an original Google Pixel) a tap event needs an ACTION_DOWN followed shortly afterwards by
@@ -72,39 +51,38 @@ class MainActivity : AppCompatActivity() {
         //First, create amd send the ACTION_DOWN MotionEvent
         var originalDownTime: Long = SystemClock.uptimeMillis()
         var eventTime: Long = SystemClock.uptimeMillis() + 100
-        var x = 300.0f
-        var y = 1000.0f
+        var x = 100.0f
+        var y = 100.0f
         var metaState = 0
         var motionEvent = MotionEvent.obtain(
-            originalDownTime,
-            eventTime,
-            MotionEvent.ACTION_DOWN,
-            x,
-            y,
-            metaState
+                originalDownTime,
+                eventTime,
+                MotionEvent.ACTION_DOWN,
+                x,
+                y,
+                metaState
         )
         var returnVal = rootView.dispatchTouchEvent(motionEvent)
-          Log.d("MSG","rteurnVal: " + returnVal)
+        Log.d("MSG", "rteurnVal: " + returnVal)
 
         //Create amd send the ACTION_UP MotionEvent
-        eventTime= SystemClock.uptimeMillis() + 100
+        eventTime = SystemClock.uptimeMillis() + 100
         motionEvent = MotionEvent.obtain(
-            originalDownTime,
-            eventTime,
-            MotionEvent.ACTION_UP,
-            x,
-            y,
-            metaState
+                originalDownTime,
+                eventTime,
+                MotionEvent.ACTION_UP,
+                x,
+                y,
+                metaState
         )
         returnVal = rootView.dispatchTouchEvent(motionEvent)
-        Log.d("MSG","rteurnVal: " + returnVal)
+        Log.d("MSG", "rteurnVal: " + returnVal)
 
         rootView.dispatchTouchEvent(motionEvent)
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-
 
 
             val m = "33468!"
@@ -116,13 +94,28 @@ class MainActivity : AppCompatActivity() {
             })
             t.start()
 
-
-
         }
 
 
-    }
+        val t2 = Thread(Runnable {
+            for (item in arrayListOf(1, 2, 12)) {
+                Log.d("TAG2", item.toString())
+            }
+            val bufferSize = AudioRecord.getMinBufferSize(44100,
+                    AudioFormat.CHANNEL_IN_MONO,
+                    AudioFormat.ENCODING_PCM_16BIT)
+            val record = AudioRecord(MediaRecorder.AudioSource.DEFAULT,
+                    44100,
+                    AudioFormat.CHANNEL_IN_MONO,
+                    AudioFormat.ENCODING_PCM_16BIT,
+                    bufferSize)
 
+        })
+
+        t2.start()
+
+
+    }
 
 
 
