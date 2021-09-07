@@ -41,12 +41,12 @@ var joypad_sensitivity = 2
 #		gun_semi_auto_rifle_cock_02,
 #		gun_submachine_auto_shot_00_automatic_preview_01
 var audio_clips = {
-	"hit":preload("res://sounds/hit.wav"),
-	"rifle_shot":preload("res://sounds/hit.wav"),
-	"gun_cock":preload("res://sounds/sweep.wav"),
-	"sweep":preload("res://sounds/sweep.wav"),
-	"juimp":preload("res://sounds/juimp.wav"),
-	"score":preload("res://sounds/score.wav"),
+#	"hit":preload("res://sounds/hit.wav"),
+#	"rifle_shot":preload("res://sounds/hit.wav"),
+#	"gun_cock":preload("res://sounds/sweep.wav"),
+#	"sweep":preload("res://sounds/sweep.wav"),
+#	"juimp":preload("res://sounds/juimp.wav"),
+#	"score":preload("res://sounds/score.wav"),
 }
 
 # The simple audio player scene

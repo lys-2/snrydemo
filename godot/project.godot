@@ -26,6 +26,7 @@ Globals="*res://Globals.gd"
 
 [debug]
 
+settings/fps/force_fps=60
 gdscript/warnings/enable=false
 
 [display]
