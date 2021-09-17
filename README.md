@@ -1,2 +1,2 @@
 
-all explained at twitch.tw/sunraylmtd
+all explained at https://www.twitch.tv/sunraylmtd
