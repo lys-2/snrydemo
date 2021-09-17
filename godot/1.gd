@@ -4,6 +4,7 @@ extends Control
 # 0.5 is half resolution and 2.0 is double resolution. Higher values look
 # sharper but are slower to render. Values above 1 can be used for supersampling
 # (SSAA), but filtering must be enabled for supersampling to work.
+
 var scale_factor = 1.0
 var s = [960, 540]
 onready var viewport = $ViewportContainer/Viewport

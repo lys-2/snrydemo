@@ -18,4 +18,4 @@ extends KinematicBody
 #	b.rotate_y(0.05)
 #	c.rotate_x(0.1)
 #	c.rotate_y(0.3)
-#	pass
+

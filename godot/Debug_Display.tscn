@@ -33,3 +33,16 @@ text = "OS:Windows"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MEM_Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 4.56348
+margin_top = 48.2182
+margin_right = -10.4365
+margin_bottom = 73.2182
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+text = "OS:Windows"
+__meta__ = {
+"_edit_use_anchors_": false
+}
