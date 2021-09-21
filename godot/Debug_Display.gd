@@ -4,7 +4,7 @@ func _ready():
 	# Set the OS label and the engine version label
 	$OS_Label.text = OS.get_name()
 	#$Engine_Label.text = "Godot version:" + Engine.get_version_info()["string"]
-	Engine.target_fps = 30
+	Engine.target_fps = 32
 	
 func _process(delta):
 	# Update the FPS label

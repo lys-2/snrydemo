@@ -2,7 +2,7 @@ tool
 extends EditorScript
 
 var c = preload("res://18.obj")
-var s = 2
+var s = 4
 var mt = preload("res://default.material")
 var mt2 = preload("res://group1.material")
 var mt3 = preload("res://group3.material")
