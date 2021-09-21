@@ -3,14 +3,14 @@
 <title>top site</title>
 
 </head>
-<body style="background-color:HoneyDew;">
+<body style="background-color:Blue;">
 <p>
-<h4 style="background-color:Coral;">🔍🔍🔍🧶🔍🔍🧶🧶🧶11111</h4>
-<h5 style="background-color:Aquamarine;">🏮🧶🏮🏮🫑🫑🏩🏩</h5>
-<h3>🏮🏮🫑🏩</h3>
-<h1><%= String.capitalize @name %>!</h1>
-<p>4343434</p>
-
+<h4 style="background-color:Coral;">🔍🧶🔍🔍🧶🧶🧶11111</h4>
+<h5 style="background-color:Aquamarine;">111</h5>
+<h3>snrydemo</h3>
+<%# <h1><%= String.capitalize @name %>!</h1> %>
+<p>0.0.4c</p>
+<p>Welcome!</p>
 <div id="messages" role="log" aria-live="polite"></div>
 <input id="chat-input" type="text"></input>
 
