@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/370.obj-611e514c87a34adbd3a0b28c001750c1.mesh"
+
+[deps]
+
+files=[ "res://.import/370.obj-611e514c87a34adbd3a0b28c001750c1.mesh" ]
+
+source_file="res://res/ch/370.obj"
+dest_files=[ "res://.import/370.obj-611e514c87a34adbd3a0b28c001750c1.mesh", "res://.import/370.obj-611e514c87a34adbd3a0b28c001750c1.mesh" ]
+
+[params]
+
+generate_tangents=false
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

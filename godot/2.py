@@ -1,33 +1,54 @@
-from twisted.protocols.ftp import FTPFactory, FTPRealm
-from twisted.cred.portal import Portal
-from twisted.cred.checkers import AllowAnonymousAccess, FilePasswordDB
-from twisted.internet import reactor
+
 import py7zr
 import os
 import socket
 
 import time
 
-if os.path.exists('r/web/7z/web.7z'):
-    os.remove('r/web/7z/web.7z')
-if os.path.exists('r//web/7z/ln.7z'):
-    print(1)
-    os.remove('r//web/7z/ln.7z')
+def ar(data):
+    with py7zr.SevenZipFile(w, 'w') as archive:
+        archive.writeall('../godot/r/web', '')
+    print(12)
+    sock.sendto(data, ("noeight.net", 1234))
 
-os.system('.\godot -v --no-window --export "HTML5" r\web\snd.html')
-os.system('.\godot -v --no-window --export "Linux/X11" r\ln\snrydemo')
+UDP_IP = "0.0.0.0"
+UDP_PORT = 1234
 
-with py7zr.SevenZipFile('r/web/7z/web.7z', 'w') as archive:
-    archive.writeall('r/web', '')
-print(12)
-
-
-with py7zr.SevenZipFile('r/web/7z/ln.7z', 'w') as archive:
-    archive.writeall('r/ln', '')
-print(22)
+ready = True
 
 sock = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
-sock.sendto(b"1", ("noeight.net", 1234))
+sock.bind((UDP_IP, UDP_PORT))
 
-# os.system('taskkill -f /IM "python3.9.exe"')
+while True:
+
+    data, addr = sock.recvfrom(111) 
+    print(f'Got {data} from {addr}')
+
+    w = '../godot/r/7z/web.7z'
+    l = '../godot/r/7z/ln.7z'
+
+    if os.path.exists(w):
+        os.remove(w)
+    if os.path.exists(l):
+        print(1)
+        os.remove(l)
+
+
+    # os.system('cp -Force -Recurse C:\snrydemo\godot\*')
+    if data == b'1\n' or data == b'int\x00,i\x00\x00\x00\x00\x00@':
+        os.system('./godot --path ../godot -v --no-window --export-pack "HTML5 2" r/web/snd.pck')
+        ar(b'1')
+    if data == b'0\n':
+        os.system('./godot --path ../godot -v --no-window --export "HTML5" r/web/snd.html')
+        ar(b'0')
+
+    # os.system('./godot --path /mnt/c/snrydemo/godot -v --no-window --export "Linux/X11" r/ln/snrydemo')
+
+    # with py7zr.SevenZipFile(l, 'w') as archive:
+    #     archive.writeall('/mnt/c/snrydemo/godot/r/ln', '')
+    # print(22)
+
+
+
+    # os.system('taskkill -f /IM "python3.9.exe"')

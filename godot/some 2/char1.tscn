@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://some 2/char1.gd" type="Script" id=1]
+[ext_resource path="res://some 2/rp.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 1.07
+
+[node name="scene" type="Spatial"]
+_import_path = NodePath(".")
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "3D"
+}
+
+[node name="camerarig" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.970313, 0.241854, 0, -0.241854, 0.970313, 0.30417, 2.71577, 8.73423 )
+
+[node name="rp" parent="." instance=ExtResource( 2 )]
+
+[node name="rp2" parent="rp" instance=ExtResource( 2 )]
+
+[node name="rp3" parent="rp/rp2" instance=ExtResource( 2 )]
+
+[node name="rp4" parent="rp/rp2" instance=ExtResource( 2 )]
+
+[node name="rp5" parent="rp/rp2/rp4" instance=ExtResource( 2 )]
+
+[node name="rp6" parent="rp/rp2/rp4/rp5" instance=ExtResource( 2 )]
+
+[node name="rp7" parent="rp/rp2" instance=ExtResource( 2 )]
+
+[node name="rp8" parent="rp/rp2/rp7" instance=ExtResource( 2 )]
+
+[node name="rp9" parent="rp/rp2/rp7/rp8" instance=ExtResource( 2 )]
+
+[node name="rp10" parent="rp" instance=ExtResource( 2 )]
+
+[node name="rp11" parent="rp/rp10" instance=ExtResource( 2 )]
+
+[node name="rp12" parent="rp/rp10/rp11" instance=ExtResource( 2 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="rp/rp10"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.003, 0 )
+shape = SubResource( 1 )
+
+[node name="rp13" parent="rp" instance=ExtResource( 2 )]
+
+[node name="rp14" parent="rp/rp13" instance=ExtResource( 2 )]
+
+[node name="rp15" parent="rp/rp13/rp14" instance=ExtResource( 2 )]

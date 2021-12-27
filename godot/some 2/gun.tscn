@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://mt/fx.material" type="Material" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="gun" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.061125, 0.101421, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.0407527, 0, 0, 0, 0.0362791, 0.23114, 0.151061, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319572, 0.141513, 0 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Spatial"]
+transform = Transform( 100, 0, 0, 0, 0.003, 0, 0, 0, 0.009, 100, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 1 )
